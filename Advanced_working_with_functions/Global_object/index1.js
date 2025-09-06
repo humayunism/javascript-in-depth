@@ -29,3 +29,13 @@ var age = 25; // becomes window.age
 function showAge() { // becomes window.showAge
   console.log(age);
 }
+//If a value is so important that you’d like to make it available globally, write it //directly as a property:
+
+globalThis.myName = "Humayun Kabir"; // create a global variable
+console.log(myName); // Humayun Kabir
+if (!globalThis.Promise) {
+    console.log("your environment doesn't support Promise");
+}
+else {
+    console.log("your environment supports Promise");
+}
