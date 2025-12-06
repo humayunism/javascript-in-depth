@@ -1,3 +1,17 @@
+// Node-friendly shims for browser functions (confirm, alert).
+// These allow the example to run under Node without a browser.
+if (typeof confirm === 'undefined') {
+  global.confirm = (q) => {
+    console.log(`[confirm] ${q} -> default: true`);
+    return true;
+  };
+}
+if (typeof alert === 'undefined') {
+  global.alert = (...args) => {
+    console.log('[alert]', ...args);
+  };
+}
+
 function ask(question, ...handlers) {
   let isYes = confirm(question);
 
