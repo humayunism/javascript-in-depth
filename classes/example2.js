@@ -9,4 +9,4 @@ class user {
 }
 
 let user1 = new user("Afia Mubasshira");
-console.log(user1);
+console.log(typeof user);

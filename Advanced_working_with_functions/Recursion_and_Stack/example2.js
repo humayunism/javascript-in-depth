@@ -1,8 +1,8 @@
 // finding power by recursive approach
 
 function powerByRecursive(x,n) {
-    if (n === 0) {
-        return 1;
+    if (n === 1) {
+        return x;
     }
 
     return x * powerByRecursive(x, n -1);
